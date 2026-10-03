@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snake</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hud">
+      <p class="hud__stat">
+        <span class="hud__label">Score</span>
+        <span class="hud__value" id="score">0</span>
+      </p>
+      <p class="hud__stat">
+        <span class="hud__label">Best</span>
+        <span class="hud__value" id="best">0</span>
+      </p>
+    </header>
+
+    <div class="board" id="board-frame">
+      <canvas id="board" width="480" height="480"></canvas>
+      <div class="overlay" id="overlay">
+        <h1 class="overlay__title" id="overlay-title">Snake</h1>
+        <p class="overlay__text" id="overlay-text">Eat the food. Do not hit the walls or yourself.</p>
+        <button class="overlay__button" id="overlay-button" type="button">Start</button>
+      </div>
+    </div>
+
+    <footer class="help">
+      <p class="help__text">
+        Move: W A S D or arrow keys. Pause: Space. Restart: R.
+      </p>
+    </footer>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/snake.js"></script>
+  <script src="js/food.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

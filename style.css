@@ -1,0 +1,138 @@
+:root {
+  --bg: #14161a;
+  --panel: #1b1e24;
+  --line: #2a2f39;
+  --text: #e8eaed;
+  --muted: #8b93a1;
+  --accent: #4ade80;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.shell {
+  width: 100%;
+  max-width: 480px;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 12px;
+}
+
+.hud__stat {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0;
+}
+
+.hud__label {
+  color: var(--muted);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hud__value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.board {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.board canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  text-align: center;
+  background: rgba(20, 22, 26, 0.88);
+}
+
+.overlay[hidden] {
+  display: none;
+}
+
+.overlay__title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.overlay__text {
+  margin: 0;
+  max-width: 30ch;
+  color: var(--muted);
+}
+
+.overlay__button {
+  margin-top: 4px;
+  padding: 10px 22px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #0d1a12;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.overlay__button:hover {
+  background: #3fc46f;
+}
+
+.overlay__button:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
+
+.help {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.8125rem;
+}
+
+.help__text {
+  margin: 0;
+}
